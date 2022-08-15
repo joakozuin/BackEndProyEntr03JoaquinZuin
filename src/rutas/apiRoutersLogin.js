@@ -131,12 +131,6 @@ router.get('/errorLogin',(req,res)=>{
 router.get('/datos',isAuth,(req,res)=>{
     //res.render('info',{nombre:req.user.nombre})
     logger.warn('ruta datos-Login sin Error')
-    nombClie=req.user[0].nombre
-
-    logger.info('Login Nombre Usuario/Cliente Global desde la ruta')
-    logger.info('-------------------------------------------------')
-    logger.info(nombClie)
-
     res.json({
         mensaje:'Login sin error',
         nombre:req.user[0].nombre,

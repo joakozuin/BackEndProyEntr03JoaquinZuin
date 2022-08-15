@@ -98,7 +98,7 @@ passport.serializeUser(async(usuario,done)=>{
 
   console.log('Passport Serializando el usuario')
   console.log(usuario)
- 
+  nombClie=usuario.nombre
     done(null,usuario)
 })
 
