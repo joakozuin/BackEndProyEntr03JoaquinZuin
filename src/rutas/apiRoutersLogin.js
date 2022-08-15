@@ -132,6 +132,11 @@ router.get('/datos',isAuth,(req,res)=>{
     //res.render('info',{nombre:req.user.nombre})
     logger.warn('ruta datos-Login sin Error')
     nombClie=req.user[0].nombre
+
+    logger.info('Login Nombre Usuario/Cliente Global desde la ruta')
+    logger.info('-------------------------------------------------')
+    logger.info(nombClie)
+
     res.json({
         mensaje:'Login sin error',
         nombre:req.user[0].nombre,
@@ -143,8 +148,7 @@ router.get('/logout',(req,res)=>{
 
     logger.info('ruta datos-Login usuario deslogeado')
     logger.info(nombClie)
-    console.log('ruta datos-Login usuario deslogeado')
-    console.log(nombClie)
+ 
     req.session.destroy(err=>{
        res.json({
         mensaje:'Solicitando nombre usuario deslogeado',
@@ -160,8 +164,7 @@ router.get('/',(req,res)=>{
     //res.render('login')
     logger.info('ruta datos-Login usuario logeado')
     logger.info(nombClie)
-    console.log('ruta datos-Login usuario logeado')
-    console.log(nombClie)
+ 
     res.json({
         mensaje:'Solicitando nombre usuario logeado',
         nombre:nombClie,
