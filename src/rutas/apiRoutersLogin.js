@@ -141,6 +141,10 @@ router.get('/datos',isAuth,(req,res)=>{
 
 router.get('/logout',(req,res)=>{
 
+    logger.info('ruta datos-Login usuario deslogeado')
+    logger.info(nombClie)
+    console.log('ruta datos-Login usuario deslogeado')
+    console.log(nombClie)
     req.session.destroy(err=>{
        res.json({
         mensaje:'Solicitando nombre usuario deslogeado',
@@ -156,6 +160,8 @@ router.get('/',(req,res)=>{
     //res.render('login')
     logger.info('ruta datos-Login usuario logeado')
     logger.info(nombClie)
+    console.log('ruta datos-Login usuario logeado')
+    console.log(nombClie)
     res.json({
         mensaje:'Solicitando nombre usuario logeado',
         nombre:nombClie,
