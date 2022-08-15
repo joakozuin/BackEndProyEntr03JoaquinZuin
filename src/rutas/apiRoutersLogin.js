@@ -131,6 +131,8 @@ router.get('/errorLogin',(req,res)=>{
 router.get('/datos',isAuth,(req,res)=>{
     //res.render('info',{nombre:req.user.nombre})
     logger.warn('ruta datos-Login sin Error')
+    logger.info('RutaLogin usuario logeado con exito')
+    logger.info(req.user[0].nombre)
     res.json({
         mensaje:'Login sin error',
         nombre:req.user[0].nombre,
