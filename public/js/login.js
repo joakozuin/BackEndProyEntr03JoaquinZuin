@@ -42,7 +42,8 @@ botonLogin.addEventListener("click", (e) => {
   //Petición Post HTTP envia usuario a la ruta
   //en formato JSON
 
-  fetch("http://localhost:8080/api/login/", {
+  //fetch("http://localhost:8080/api/login/", {
+  fetch("https://joakowebbackend3entrega.herokuapp.com/api/login/", {  
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -70,12 +71,12 @@ botonLogin.addEventListener("click", (e) => {
     //
       if(data.error){
 
-        location.assign("http://localhost:8080/errorLogin.html");
-
+        //location.assign("http://localhost:8080/errorLogin.html");
+        location.assign("https://joakowebbackend3entrega.herokuapp.com/errorLogin.html");
       }else{
         
-        location.assign("http://localhost:8080/productos.html");
-        
+        //location.assign("http://localhost:8080/productos.html");
+        location.assign("https://joakowebbackend3entrega.herokuapp.com/productos.html");
       }
 
     })

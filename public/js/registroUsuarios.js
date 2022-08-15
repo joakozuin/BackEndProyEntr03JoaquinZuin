@@ -55,8 +55,8 @@ botonRegistro.addEventListener("click", (e) => {
 
   //Petición Post HTTP envia producto a la ruta
   //en formato JSON
-
-  fetch("http://localhost:8080/api/login/registro", {
+  //fetch("http://localhost:8080/api/login/registro", {
+  fetch("https://joakowebbackend3entrega.herokuapp.com/login/registro", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -76,9 +76,13 @@ botonRegistro.addEventListener("click", (e) => {
     //cargar una página HTML
     //
        if(data.error){
-        location.assign("http://localhost:8080/errorRegistro.html");
+        //location.assign("http://localhost:8080/errorRegistro.html");
+        location.assign("https://joakowebbackend3entrega.herokuapp.com/errorRegistro.html");
+
        }else{
-        location.assign("http://localhost:8080/index.html");
+        //location.assign("http://localhost:8080/index.html");
+        location.assign("https://joakowebbackend3entrega.herokuapp.com/index.html");
+
        }
 
     })

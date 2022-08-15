@@ -4,9 +4,12 @@ import dotenv from 'dotenv';
  let productosDao
  let carritosDao
  let usuariosDao
- //console.log("Nombre Base Datos env: "+process.env.nombreBD)
+ 
 
    const BaseDatos=process.env.nombreBD || 'MongoDB'
+
+   console.log("Variable Nombre Base Datos env: "+process.env.nombreBD)
+   console.log("Nombre Base Datos env: "+BaseDatos)
 
   switch (BaseDatos) {
     case 'MongoDB':

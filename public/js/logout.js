@@ -5,7 +5,8 @@ cargarLogout=()=>{
   console.log("Cargando Despedida....")
 
   // Petición HTTP Renderiza el usuario Logeado
-  fetch("http://localhost:8080/api/login/logout")
+  //fetch("http://localhost:8080/api/login/logout")
+  fetch("https://joakowebbackend3entrega.herokuapp.com/api/login/logout")
   .then((respuesta) =>{
 
         return respuesta.json()

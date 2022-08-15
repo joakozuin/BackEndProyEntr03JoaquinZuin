@@ -27,7 +27,7 @@
         <!--Usuario Logeado  -->
          <script type="text/x-handlebars-template" id="handlebUsuarioLogeado">
 
-          <div class="mui-col-md-10 mui--text-center " style="background-color: rgb(208, 222, 235)">
+          <div class="mui-col-md-8 mui--text-center " style="background-color: rgb(208, 222, 235)">
            <h2>Hola Bienvenido: {{usuario}} </h2>
           </div>
 
@@ -35,7 +35,17 @@
 
          <div id="rendUsuarioLogeado"></div>
         <!--Usuario Logeado  -->
-          
+
+        <div class="mui-col-md-1 mui--text-center "  style="background-color: rgb(241, 238, 238);margin-top:10px">
+            
+          <button id="perfilUsuario" class=" mui-btn mui-btn--small mui-btn--raised mui-btn--primary" onclick="activateModal()" > PerfilUsuario </button>
+       
+         </div>
+
+         <div class="mui-col-md-1 mui--text-center "  style="background-color: rgb(241, 238, 238);margin-top:10px">        
+          <img id="avatarUsuario" src="./img/AvatarJoaquinV02.jpg" alt="avatarClie" width="50" height="60">
+         </div>
+
           <div class="mui-col-md-2 mui--text-center "  style="background-color: rgb(241, 238, 238);margin-top:10px">
             
                <button id="desLogearse" class=" mui-btn mui-btn--small mui-btn--raised mui-btn--accent"> Deslogear</button>
@@ -225,6 +235,21 @@
     <script src="./js/productos00.js"></script>
 
     <script src="./js/productos01.js"></script>
+
+
+    <script>
+      function activateModal() {
+        // initialize modal element
+        let modalEl = document.createElement('div');
+        modalEl.style.width = '600px';
+        modalEl.style.height = '400px';
+        modalEl.style.margin = '100px auto';
+        modalEl.style.backgroundColor = '#fff';
+    
+        // show modal
+        mui.overlay('on', modalEl);
+      }
+    </script>
 
   </body>
 </html>

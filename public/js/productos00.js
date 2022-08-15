@@ -56,7 +56,9 @@ cargarUsuario=()=>{
 
   console.log("Recibiendo Usuario Logeado del servidor");
   // Petición HTTP Renderiza el usuario Logeado
-   fetch("http://localhost:8080/api/login")
+  
+   //fetch("http://localhost:8080/api/login")
+   fetch("https://joakowebbackend3entrega.herokuapp.com/api/login")
     .then((respuesta) =>{
 
            return respuesta.json()
@@ -90,7 +92,8 @@ cargarUsuario=()=>{
 
             console.error("Error:", error);
             
-            location.assign("http://localhost:8080/login.html");
+            //location.assign("http://localhost:8080/login.html");
+            location.assign("https://joakowebbackend3entrega.herokuapp.com/login.html");
           });
 }
 
@@ -108,7 +111,8 @@ cargarProd=()=>{
 
   console.log("Cliente recibiendo Producto del servidor");
   // Petición HTTP Renderiza lado Servidor
-   fetch("http://localhost:8080/api/productos")
+   //fetch("http://localhost:8080/api/productos")
+   fetch("https://joakowebbackend3entrega.herokuapp.com/api/productos")
       .then((response) => response.text())
        .then(data=>{
               const productos=JSON.parse(data)
