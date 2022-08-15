@@ -193,6 +193,7 @@ class Servidor {
       logger.info('---------------------------------')
       this.app.use(function(reg,res,next){
         global.acceso=true //acceso administrador
+        global.nombClie=''
         next()
         });
 
@@ -201,6 +202,7 @@ class Servidor {
      logger.info('---------------------------')
       this.app.use(function(reg,res,next){
         global.acceso=false //acceso usuarios
+        global.nombClie=''
         next()
       });
    }}
